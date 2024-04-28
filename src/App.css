@@ -1,0 +1,356 @@
+#root {
+  max-width: 1280px;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+}
+body {
+  
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMCIV9QmzkRECDLn0gp9eSHMGHrE2x3f15q3HoAu65CFi6TjHuoyVwM8RxKsepgddb8b0&usqp=CAU');
+;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: #ffffff;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+.app-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+}
+
+.nav-bar {
+  width: 20%;
+  height: 100vh;
+  padding: 1.4em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  background-color: #2f2f2f;
+}
+.nav-functions {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-config {
+  /* height: 100px; */
+  background-color: #888;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.title {
+  height: fit-content;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid #c3bebe;
+  line-height: 1.5em;
+}
+.title svg {
+  vertical-align: middle;
+}
+
+.nav-item {
+  font-weight: 400;
+  font-size: 1.1em;
+  position: relative; /* set position to relative so we can position the underline */
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.1em;
+  padding: 0 0.1em;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor; /* set the color of the underline to the same as the text color */
+  transition: width 0.3s ease-out; /* add a transition to make the underline fill smoothly */
+}
+
+.nav-item:hover::after {
+  width: 100%; /* when hovering, set the width to 100% to fill the underline */
+}
+
+.nav-item:not(:hover)::after {
+  width: 0; /* when not hovering, set the width back to 0 to make the underline slowly disappear */
+}
+
+.App {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.post-feed-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 80%;
+  height: 60%;
+  padding: 2rem;
+}
+
+.post-container {
+  padding: 20px;
+  text-align: center;
+  height: fit-content;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #2f2f2f;
+  gap: 10px;
+}
+
+.post-container button {
+  border-color: none;
+}
+
+.post-container h3 {
+  margin: 0;
+}
+
+.post-container p {
+  font-size: small;
+  color: #6c6b6b;
+  margin: 0;
+}
+
+.post-container:hover {
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.largeCardContainer {
+  background-color: #2f2f2f;
+  width: 100%;
+  height: 60%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.largeCardContainer:hover {
+  border: none;
+}
+
+.largeCardContainer img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.largeCardContainer p {
+  font-size: small;
+  color: #6c6b6b;
+  margin: 0.5em;
+}
+
+.largeCardContainer h4 {
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 300px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+textarea {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+input[type="submit"] {
+  padding: 15px;
+  border-radius: 6px;
+  width: 200px;
+  outline: none;
+  border: 1px solid currentColor;
+  background-color: #ffffff;
+  color: #213547;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.1s ease;
+}
+
+input[type="radio"] {
+  align-self: left;
+}
+
+.commentContainer {
+  width: 100%;
+  height: 30%;
+  overflow-y: scroll;
+  text-align: left;
+  align-self: flex-start;
+  padding: 0.5em;
+  /* background-color: #213547; */
+}
+
+.commentContainer ul {
+  list-style: none;
+  display: contents;
+}
+
+.commentFormContainer {
+  width: 100%;
+  padding: 0.5em;
+  height: 10%;
+  align-items: center;
+}
+
+.commentFormContainer form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.commentFormContainer input {
+  padding: 15px;
+  border-radius: 6px;
+  border: none;
+  width: 300px;
+  font-weight: 600;
+  font-size: 16px;
+  /* height: 50%; */
+}
+
+.aboutTextContainer {
+  width: 600px;
+}
+.post {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.comment-form {
+  margin-top: 10px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.comment-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+h1 {
+  color: rgb(59, 59, 59);
+  background-color: #fff;
+}
+
+h3 {
+  color: rgb(59, 59, 59);
+  background-color: #fff;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+}
+.post {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 200px; /* Adjust the height as per your requirement */
+  width: 300px; /* Adjust the width as per your requirement */
+}
+.commentContainer {
+  color:rgba(0, 0, 0, 0.9);
+  background-color: #fff;
+
+  
+  
+}
+
+
